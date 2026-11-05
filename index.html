@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Halima Digital accompagne les marques dans leur développement numérique et leur présence en ligne.">
+
 <title>Halima Digital | Digital Creative Agency</title>
 
 <style>
@@ -137,6 +138,8 @@ h1 span {
     line-height: 1.7;
 }
 
+/* SERVICES */
+
 .services {
     background: #f4f7fc;
 }
@@ -178,6 +181,8 @@ h1 span {
     line-height: 1.7;
 }
 
+/* ABOUT */
+
 .about {
     text-align: center;
     max-width: 850px;
@@ -198,7 +203,7 @@ h1 span {
 .portfolio-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 22px;
+    gap: 25px;
 }
 
 .portfolio-card {
@@ -209,17 +214,11 @@ h1 span {
     transition: 0.3s;
 }
 
-.portfolio-visual {
-    min-height: 180px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 25px;
-    text-align: center;
-    background: linear-gradient(135deg, #eaf0fb, #fceef5);
-    color: #153b7a;
-    font-weight: bold;
-    font-size: 24px;
+.portfolio-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
 }
 
 .portfolio-info {
@@ -362,21 +361,30 @@ footer {
 
 <main>
 
+<!-- ACCUEIL -->
+
 <section class="hero" id="accueil">
     <div>
         <div class="tag">DIGITAL MARKETING AGENCY</div>
+
         <h1>We Build <span>Digital Success.</span></h1>
+
         <p>
             Nous aidons les marques à développer leur présence
             en ligne grâce à la créativité, au contenu et aux
             solutions digitales.
         </p>
-        <a href="#services" class="btn">Découvrir nos services</a>
+
+        <a href="#services" class="btn">
+            Découvrir nos services
+        </a>
     </div>
 
     <img src="mdigital%20project.png"
          alt="Halima Digital - identité visuelle">
 </section>
+
+<!-- SERVICES -->
 
 <section class="services" id="services">
     <div class="section-title">
@@ -385,6 +393,7 @@ footer {
     </div>
 
     <div class="cards">
+
         <div class="card">
             <div class="symbol">📊</div>
             <h3>Stratégie digitale</h3>
@@ -408,8 +417,11 @@ footer {
             <h3>Content creation</h3>
             <p>Du contenu créatif pour valoriser votre identité.</p>
         </div>
+
     </div>
 </section>
+
+<!-- A PROPOS -->
 
 <section id="apropos">
     <div class="about">
@@ -429,55 +441,99 @@ footer {
     </div>
 </section>
 
+<!-- PORTFOLIO AVEC IMAGES -->
+
 <section class="portfolio" id="portfolio">
+
     <div class="section-title">
         <h2>Our Portfolio</h2>
-        <p>A selection of creative work and concept projects.</p>
+        <p>Discover our creative work and visual concepts.</p>
     </div>
 
     <div class="portfolio-grid">
+
         <article class="portfolio-card">
-            <div class="portfolio-visual">BRAND IDENTITY</div>
+
+            <img class="portfolio-image"
+                 src="Halima%20Digital%20Agency%20Home.png"
+                 alt="Halima Digital Agency Home">
+
             <div class="portfolio-info">
-                <span class="project-type">CONCEPT PROJECT</span>
+                <span class="project-type">BRAND IDENTITY</span>
                 <h3>Bloom Studio</h3>
-                <p>A visual identity concept for a modern beauty brand.</p>
+                <p>
+                    A creative visual identity concept
+                    for a modern digital brand.
+                </p>
             </div>
+
         </article>
 
         <article class="portfolio-card">
-            <div class="portfolio-visual">SOCIAL MEDIA</div>
+
+            <img class="portfolio-image"
+                 src="Halima%20Digital%20Creative%20angency.png"
+                 alt="Halima Digital Creative Agency">
+
             <div class="portfolio-info">
-                <span class="project-type">CONCEPT PROJECT</span>
+                <span class="project-type">SOCIAL MEDIA</span>
                 <h3>Pink Mood</h3>
-                <p>Creative social media visuals for a lifestyle brand.</p>
+                <p>
+                    Creative visual content and social
+                    media design inspiration.
+                </p>
             </div>
+
         </article>
 
         <article class="portfolio-card">
-            <div class="portfolio-visual">WEB DESIGN</div>
+
+            <img class="portfolio-image"
+                 src="mdigital%20project.png"
+                 alt="Halima Digital visual project">
+
             <div class="portfolio-info">
-                <span class="project-type">CONCEPT PROJECT</span>
+                <span class="project-type">WEB DESIGN</span>
                 <h3>Nova Digital</h3>
-                <p>A clean and modern website concept for a digital business.</p>
+                <p>
+                    A modern digital design concept
+                    with a clean and professional look.
+                </p>
             </div>
+
         </article>
+
     </div>
 </section>
 
+<!-- CONTACT -->
+
 <section class="contact" id="contact">
+
     <h2>Let's work together.</h2>
-    <p>Vous avez un projet ou une question ? Parlons-en !</p>
+
+    <p>
+        Vous avez un projet ou une question ?
+        Parlons-en !
+    </p>
 
     <a class="btn" href="mailto:emilah720@gmail.com">
         Contactez-nous
     </a>
 
     <div class="socials">
-        <a href="https://www.instagram.com/hali.madigital/" target="_blank">Instagram</a>
-        <a href="https://www.tiktok.com/@hlm_09" target="_blank">TikTok</a>
-        <a href="https://www.snapchat.com/add/lgm_girl01" target="_blank">Snapchat</a>
+
+        <a href="https://www.instagram.com/hali.madigital/"
+           target="_blank">Instagram</a>
+
+        <a href="https://www.tiktok.com/@hlm_09"
+           target="_blank">TikTok</a>
+
+        <a href="https://www.snapchat.com/add/lgm_girl01"
+           target="_blank">Snapchat</a>
+
     </div>
+
 </section>
 
 </main>
