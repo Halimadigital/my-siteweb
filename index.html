@@ -46,20 +46,28 @@ header {
     color: #315a9d;
 }
 
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
 nav a {
     text-decoration: none;
     color: #17243b;
-    margin-left: 22px;
     font-size: 13px;
     font-weight: bold;
 }
 
 nav a:hover {
-    color: #2456a4;
+    color: #d66b9c;
+}
+
+section {
+    padding: 80px 8%;
 }
 
 .hero {
-    padding: 65px 8%;
     display: grid;
     grid-template-columns: 1fr 1.1fr;
     align-items: center;
@@ -99,16 +107,18 @@ h1 span {
     text-decoration: none;
     margin-top: 28px;
     font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #d66b9c;
+    transform: translateY(-2px);
 }
 
 .hero img {
     width: 100%;
     border-radius: 12px;
     box-shadow: 0 15px 45px #142d501c;
-}
-
-section {
-    padding: 75px 8%;
 }
 
 .section-title {
@@ -124,6 +134,7 @@ section {
 
 .section-title p {
     color: #788397;
+    line-height: 1.7;
 }
 
 .services {
@@ -142,9 +153,15 @@ section {
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 5px 20px #00000008;
+    transition: 0.3s;
 }
 
-.card .symbol {
+.card:hover,
+.portfolio-card:hover {
+    transform: translateY(-5px);
+}
+
+.symbol {
     font-size: 32px;
     margin-bottom: 18px;
 }
@@ -172,6 +189,65 @@ section {
     color: #687386;
 }
 
+/* PORTFOLIO */
+
+.portfolio {
+    background: #fff;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.portfolio-card {
+    background: #f4f7fc;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px #00000008;
+    transition: 0.3s;
+}
+
+.portfolio-visual {
+    min-height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    text-align: center;
+    background: linear-gradient(135deg, #eaf0fb, #fceef5);
+    color: #153b7a;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.portfolio-info {
+    padding: 22px;
+}
+
+.portfolio-info h3 {
+    color: #153b7a;
+    margin-bottom: 10px;
+}
+
+.portfolio-info p {
+    color: #687386;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.project-type {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: #c05c8b;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* CONTACT */
+
 .contact {
     background: #102b56;
     color: white;
@@ -193,6 +269,10 @@ section {
     color: #153b7a;
 }
 
+.contact .btn:hover {
+    background: #fceef5;
+}
+
 .socials {
     margin-top: 30px;
     display: flex;
@@ -207,6 +287,10 @@ section {
     font-weight: bold;
 }
 
+.socials a:hover {
+    color: #f3a9cb;
+}
+
 footer {
     background: #091b35;
     color: #bdc9dc;
@@ -215,21 +299,12 @@ footer {
     font-size: 13px;
 }
 
+/* RESPONSIVE DESIGN */
+
 @media(max-width: 800px) {
     header {
         flex-direction: column;
         gap: 20px;
-    }
-
-    nav {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
-    }
-
-    nav a {
-        margin: 0;
     }
 
     .hero {
@@ -240,11 +315,29 @@ footer {
     .cards {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media(max-width: 480px) {
-    .cards {
+    nav {
+        justify-content: center;
+        gap: 13px;
+    }
+
+    nav a {
+        font-size: 11px;
+    }
+
+    .cards,
+    .portfolio-grid {
         grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 60px 6%;
     }
 }
 </style>
@@ -262,6 +355,7 @@ footer {
         <a href="#accueil">ACCUEIL</a>
         <a href="#apropos">À PROPOS</a>
         <a href="#services">SERVICES</a>
+        <a href="#portfolio">PORTFOLIO</a>
         <a href="#contact">CONTACT</a>
     </nav>
 </header>
@@ -271,19 +365,17 @@ footer {
 <section class="hero" id="accueil">
     <div>
         <div class="tag">DIGITAL MARKETING AGENCY</div>
-
         <h1>We Build <span>Digital Success.</span></h1>
-
         <p>
             Nous aidons les marques à développer leur présence
             en ligne grâce à la créativité, au contenu et aux
             solutions digitales.
         </p>
-
         <a href="#services" class="btn">Découvrir nos services</a>
     </div>
 
-<img src="mdigital%20project.png" alt="Halima Digital - identité visuelle">
+    <img src="mdigital%20project.png"
+         alt="Halima Digital - identité visuelle">
 </section>
 
 <section class="services" id="services">
@@ -337,9 +429,44 @@ footer {
     </div>
 </section>
 
+<section class="portfolio" id="portfolio">
+    <div class="section-title">
+        <h2>Our Portfolio</h2>
+        <p>A selection of creative work and concept projects.</p>
+    </div>
+
+    <div class="portfolio-grid">
+        <article class="portfolio-card">
+            <div class="portfolio-visual">BRAND IDENTITY</div>
+            <div class="portfolio-info">
+                <span class="project-type">CONCEPT PROJECT</span>
+                <h3>Bloom Studio</h3>
+                <p>A visual identity concept for a modern beauty brand.</p>
+            </div>
+        </article>
+
+        <article class="portfolio-card">
+            <div class="portfolio-visual">SOCIAL MEDIA</div>
+            <div class="portfolio-info">
+                <span class="project-type">CONCEPT PROJECT</span>
+                <h3>Pink Mood</h3>
+                <p>Creative social media visuals for a lifestyle brand.</p>
+            </div>
+        </article>
+
+        <article class="portfolio-card">
+            <div class="portfolio-visual">WEB DESIGN</div>
+            <div class="portfolio-info">
+                <span class="project-type">CONCEPT PROJECT</span>
+                <h3>Nova Digital</h3>
+                <p>A clean and modern website concept for a digital business.</p>
+            </div>
+        </article>
+    </div>
+</section>
+
 <section class="contact" id="contact">
     <h2>Let's work together.</h2>
-
     <p>Vous avez un projet ou une question ? Parlons-en !</p>
 
     <a class="btn" href="mailto:emilah720@gmail.com">
@@ -347,14 +474,9 @@ footer {
     </a>
 
     <div class="socials">
-        <a href="https://www.instagram.com/hali.madigital/"
-           target="_blank">Instagram</a>
-
-        <a href="https://www.tiktok.com/@hlm_09"
-           target="_blank">TikTok</a>
-
-        <a href="https://www.snapchat.com/add/lgm_girl01"
-           target="_blank">Snapchat</a>
+        <a href="https://www.instagram.com/hali.madigital/" target="_blank">Instagram</a>
+        <a href="https://www.tiktok.com/@hlm_09" target="_blank">TikTok</a>
+        <a href="https://www.snapchat.com/add/lgm_girl01" target="_blank">Snapchat</a>
     </div>
 </section>
 
