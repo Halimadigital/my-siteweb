@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Halima Digital accompagne les marques dans leur développement numérique et leur présence en ligne.">
+<title>Halima Digital | Digital Creative Agency</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #17243b;
+    background: #fff;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 8%;
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 2px 15px #0000000a;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 800;
+    color: #102e69;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    display: block;
+    font-size: 12px;
+    letter-spacing: 7px;
+    color: #315a9d;
+}
+
+nav a {
+    text-decoration: none;
+    color: #17243b;
+    margin-left: 22px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #2456a4;
+}
+
+.hero {
+    padding: 65px 8%;
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    align-items: center;
+    gap: 45px;
+}
+
+.tag {
+    color: #315a9d;
+    letter-spacing: 4px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: clamp(38px, 5vw, 65px);
+    line-height: 1.1;
+    margin: 20px 0;
+    color: #101d34;
+}
+
+h1 span {
+    color: #2456a4;
+}
+
+.hero p {
+    line-height: 1.8;
+    color: #687386;
+    max-width: 480px;
+}
+
+.btn {
+    display: inline-block;
+    background: #153b7a;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 6px;
+    text-decoration: none;
+    margin-top: 28px;
+    font-weight: bold;
+}
+
+.hero img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 15px 45px #142d501c;
+}
+
+section {
+    padding: 75px 8%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title h2 {
+    font-size: 34px;
+    color: #153b7a;
+    margin-bottom: 12px;
+}
+
+.section-title p {
+    color: #788397;
+}
+
+.services {
+    background: #f4f7fc;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 28px 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 20px #00000008;
+}
+
+.card .symbol {
+    font-size: 32px;
+    margin-bottom: 18px;
+}
+
+.card h3 {
+    color: #153b7a;
+    font-size: 17px;
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #778194;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.about {
+    text-align: center;
+    max-width: 850px;
+    margin: auto;
+}
+
+.about p {
+    line-height: 1.9;
+    color: #687386;
+}
+
+.contact {
+    background: #102b56;
+    color: white;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 34px;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    line-height: 1.8;
+    color: #dce5f4;
+}
+
+.contact .btn {
+    background: white;
+    color: #153b7a;
+}
+
+.socials {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.socials a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer {
+    background: #091b35;
+    color: #bdc9dc;
+    text-align: center;
+    padding: 25px;
+    font-size: 13px;
+}
+
+@media(max-width: 800px) {
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    nav a {
+        margin: 0;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding-top: 45px;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 480px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        HALIMA
+        <span>DIGITAL</span>
+    </div>
+
+    <nav>
+        <a href="#accueil">ACCUEIL</a>
+        <a href="#apropos">À PROPOS</a>
+        <a href="#services">SERVICES</a>
+        <a href="#contact">CONTACT</a>
+    </nav>
+</header>
+
+<main>
+
+<section class="hero" id="accueil">
+    <div>
+        <div class="tag">DIGITAL MARKETING AGENCY</div>
+
+        <h1>We Build <span>Digital Success.</span></h1>
+
+        <p>
+            Nous aidons les marques à développer leur présence
+            en ligne grâce à la créativité, au contenu et aux
+            solutions digitales.
+        </p>
+
+        <a href="#services" class="btn">Découvrir nos services</a>
+    </div>
+
+    <img src="halima-hero.png" alt="Halima Digital - identité visuelle">
+</section>
+
+<section class="services" id="services">
+    <div class="section-title">
+        <h2>Nos services</h2>
+        <p>Des solutions créatives pour votre présence digitale.</p>
+    </div>
+
+    <div class="cards">
+        <div class="card">
+            <div class="symbol">📊</div>
+            <h3>Stratégie digitale</h3>
+            <p>Des idées et stratégies pour développer votre marque.</p>
+        </div>
+
+        <div class="card">
+            <div class="symbol">🔎</div>
+            <h3>Référencement SEO</h3>
+            <p>Améliorer votre visibilité sur les moteurs de recherche.</p>
+        </div>
+
+        <div class="card">
+            <div class="symbol">💻</div>
+            <h3>Création web</h3>
+            <p>Des expériences web modernes et professionnelles.</p>
+        </div>
+
+        <div class="card">
+            <div class="symbol">📱</div>
+            <h3>Content creation</h3>
+            <p>Du contenu créatif pour valoriser votre identité.</p>
+        </div>
+    </div>
+</section>
+
+<section id="apropos">
+    <div class="about">
+        <div class="section-title">
+            <h2>About Halima Digital</h2>
+            <p>Creativity meets digital innovation.</p>
+        </div>
+
+        <p>
+            Halima Digital est un projet créatif dédié au monde
+            du digital. Notre vision est d'aider les marques,
+            entrepreneurs et projets à construire une identité
+            forte et une présence en ligne professionnelle.
+            Nous croyons au pouvoir des idées, du contenu
+            et de l'innovation.
+        </p>
+    </div>
+</section>
+
+<section class="contact" id="contact">
+    <h2>Let's work together.</h2>
+
+    <p>Vous avez un projet ou une question ? Parlons-en !</p>
+
+    <a class="btn" href="mailto:emilah720@gmail.com">
+        Contactez-nous
+    </a>
+
+    <div class="socials">
+        <a href="https://www.instagram.com/hali.madigital/"
+           target="_blank">Instagram</a>
+
+        <a href="https://www.tiktok.com/@hlm_09"
+           target="_blank">TikTok</a>
+
+        <a href="https://www.snapchat.com/add/lgm_girl01"
+           target="_blank">Snapchat</a>
+    </div>
+</section>
+
+</main>
+
+<footer>
+    © 2026 Halima Digital. All rights reserved.
+</footer>
+
+</body>
+</html>
