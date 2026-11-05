@@ -3,9 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Halima Digital accompagne les marques dans leur développement numérique et leur présence en ligne.">
 
-<title>Halima Digital | Digital Creative Agency</title>
+<title>Halima Digital | Agence digitale créative</title>
+
+<meta name="description" content="Halima Digital accompagne les marques et entrepreneurs dans leur développement digital, leur identité visuelle et leur communication en ligne.">
 
 <style>
 * {
@@ -17,34 +18,34 @@
 
 body {
     font-family: Arial, sans-serif;
-    color: #17243b;
-    background: #fff;
+    background: #f7f9fc;
+    color: #17243c;
+    line-height: 1.7;
 }
 
 header {
+    background: white;
+    padding: 20px 8%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 22px 8%;
-    background: white;
+    flex-wrap: wrap;
+    gap: 15px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.05);
     position: sticky;
     top: 0;
-    z-index: 10;
-    box-shadow: 0 2px 15px #0000000a;
+    z-index: 100;
 }
 
 .logo {
-    font-size: 25px;
-    font-weight: 800;
-    color: #102e69;
-    letter-spacing: 2px;
+    font-size: 23px;
+    font-weight: bold;
+    color: #142b50;
+    letter-spacing: 1px;
 }
 
 .logo span {
-    display: block;
-    font-size: 12px;
-    letter-spacing: 7px;
-    color: #315a9d;
+    color: #e58bb5;
 }
 
 nav {
@@ -55,163 +56,138 @@ nav {
 
 nav a {
     text-decoration: none;
-    color: #17243b;
+    color: #17243c;
     font-size: 13px;
     font-weight: bold;
+    transition: 0.3s;
 }
 
 nav a:hover {
-    color: #d66b9c;
-}
-
-section {
-    padding: 80px 8%;
+    color: #e58bb5;
 }
 
 .hero {
-    display: grid;
-    grid-template-columns: 1fr 1.1fr;
+    min-height: 520px;
+    padding: 100px 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    gap: 45px;
+    text-align: center;
+    background: linear-gradient(135deg, #102443, #244a79);
+    color: white;
 }
 
-.tag {
-    color: #315a9d;
-    letter-spacing: 4px;
+.hero .tag {
+    color: #f1a9cd;
     font-size: 13px;
-    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
 }
 
-h1 {
-    font-size: clamp(38px, 5vw, 65px);
-    line-height: 1.1;
-    margin: 20px 0;
-    color: #101d34;
-}
-
-h1 span {
-    color: #2456a4;
+.hero h1 {
+    font-size: clamp(35px, 6vw, 58px);
+    margin-bottom: 20px;
 }
 
 .hero p {
-    line-height: 1.8;
-    color: #687386;
-    max-width: 480px;
+    max-width: 650px;
+    color: #e2e9f3;
+    font-size: 17px;
+    margin-bottom: 30px;
 }
 
 .btn {
     display: inline-block;
-    background: #153b7a;
+    padding: 13px 28px;
+    background: #e58bb5;
     color: white;
-    padding: 15px 25px;
-    border-radius: 6px;
     text-decoration: none;
-    margin-top: 28px;
+    border-radius: 30px;
     font-weight: bold;
     transition: 0.3s;
 }
 
 .btn:hover {
-    background: #d66b9c;
-    transform: translateY(-2px);
+    background: #d66c9d;
+    transform: translateY(-3px);
 }
 
-.hero img {
-    width: 100%;
-    border-radius: 12px;
-    box-shadow: 0 15px 45px #142d501c;
+section {
+    padding: 80px 9%;
+    text-align: center;
 }
 
 .section-title {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.section-title h2 {
-    font-size: 34px;
-    color: #153b7a;
+    color: #142b50;
+    font-size: 32px;
     margin-bottom: 12px;
 }
 
-.section-title p {
-    color: #788397;
-    line-height: 1.7;
+.section-subtitle {
+    color: #718096;
+    margin-bottom: 45px;
 }
-
-/* SERVICES */
 
 .services {
-    background: #f4f7fc;
-}
-
-.cards {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
 }
 
-.card {
+.service-card {
     background: white;
-    padding: 28px 20px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 5px 20px #00000008;
+    padding: 32px 22px;
+    border-radius: 16px;
+    box-shadow: 0 5px 25px rgba(20,43,80,0.06);
     transition: 0.3s;
 }
 
-.card:hover,
-.portfolio-card:hover {
-    transform: translateY(-5px);
+.service-card:hover {
+    transform: translateY(-6px);
 }
 
-.symbol {
-    font-size: 32px;
-    margin-bottom: 18px;
+.service-icon {
+    font-size: 35px;
+    margin-bottom: 15px;
 }
 
-.card h3 {
-    color: #153b7a;
-    font-size: 17px;
-    margin-bottom: 12px;
+.service-card h3 {
+    color: #142b50;
+    margin-bottom: 10px;
 }
-
-.card p {
-    color: #778194;
-    font-size: 14px;
-    line-height: 1.7;
-}
-
-/* ABOUT */
 
 .about {
-    text-align: center;
-    max-width: 850px;
+    background: white;
+}
+
+.about-content {
+    max-width: 800px;
     margin: auto;
 }
 
-.about p {
-    line-height: 1.9;
-    color: #687386;
+.about-content p {
+    color: #596579;
+    margin-top: 15px;
 }
-
-/* PORTFOLIO */
 
 .portfolio {
-    background: #fff;
-}
-
-.portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 25px;
 }
 
 .portfolio-card {
-    background: #f4f7fc;
-    border-radius: 12px;
+    background: white;
+    border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 5px 20px #00000008;
+    text-align: left;
+    box-shadow: 0 5px 25px rgba(20,43,80,0.07);
     transition: 0.3s;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-6px);
 }
 
 .portfolio-image {
@@ -225,118 +201,98 @@ h1 span {
     padding: 22px;
 }
 
+.portfolio-category {
+    color: #d66c9d;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
 .portfolio-info h3 {
-    color: #153b7a;
-    margin-bottom: 10px;
+    color: #142b50;
+    margin: 8px 0;
 }
 
 .portfolio-info p {
-    color: #687386;
+    color: #718096;
     font-size: 14px;
-    line-height: 1.7;
 }
-
-.project-type {
-    display: inline-block;
-    margin-bottom: 10px;
-    color: #c05c8b;
-    font-size: 11px;
-    font-weight: bold;
-    letter-spacing: 1px;
-}
-
-/* CONTACT */
 
 .contact {
-    background: #102b56;
+    background: #142b50;
     color: white;
-    text-align: center;
 }
 
-.contact h2 {
-    font-size: 34px;
-    margin-bottom: 20px;
+.contact .section-title {
+    color: white;
 }
 
-.contact p {
-    line-height: 1.8;
-    color: #dce5f4;
+.contact .section-subtitle {
+    color: #d5deeb;
 }
 
-.contact .btn {
-    background: white;
-    color: #153b7a;
-}
-
-.contact .btn:hover {
-    background: #fceef5;
-}
-
-.socials {
-    margin-top: 30px;
+.contact-list {
     display: flex;
-    justify-content: center;
-    gap: 25px;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    margin-top: 30px;
 }
 
-.socials a {
+.contact-item {
+    background: rgba(255,255,255,0.08);
+    padding: 15px 25px;
+    border-radius: 12px;
+    width: min(100%, 430px);
+    transition: 0.3s;
+}
+
+.contact-item:hover {
+    background: rgba(255,255,255,0.15);
+}
+
+.contact-item a {
     color: white;
     text-decoration: none;
-    font-weight: bold;
+    overflow-wrap: anywhere;
 }
 
-.socials a:hover {
-    color: #f3a9cb;
+.contact-item a:hover {
+    color: #f1a9cd;
 }
 
 footer {
-    background: #091b35;
-    color: #bdc9dc;
+    background: #0b1b32;
+    color: #cbd5e1;
+    padding: 25px 10%;
     text-align: center;
-    padding: 25px;
     font-size: 13px;
 }
 
-/* RESPONSIVE DESIGN */
-
-@media(max-width: 800px) {
-    header {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .hero {
-        grid-template-columns: 1fr;
-        padding-top: 45px;
-    }
-
-    .cards {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .portfolio-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+footer span {
+    color: #e58bb5;
 }
 
-@media(max-width: 480px) {
+@media (max-width: 600px) {
+    header {
+        justify-content: center;
+    }
+
     nav {
         justify-content: center;
-        gap: 13px;
+        gap: 12px;
     }
 
     nav a {
         font-size: 11px;
     }
 
-    .cards,
-    .portfolio-grid {
-        grid-template-columns: 1fr;
+    .hero {
+        padding: 80px 7%;
     }
 
     section {
-        padding: 60px 6%;
+        padding: 65px 7%;
     }
 }
 </style>
@@ -345,10 +301,7 @@ footer {
 <body>
 
 <header>
-    <div class="logo">
-        HALIMA
-        <span>DIGITAL</span>
-    </div>
+    <div class="logo">HALIMA <span>DIGITAL</span></div>
 
     <nav>
         <a href="#accueil">ACCUEIL</a>
@@ -361,176 +314,199 @@ footer {
 
 <main>
 
-<!-- ACCUEIL -->
-
 <section class="hero" id="accueil">
-    <div>
-        <div class="tag">DIGITAL MARKETING AGENCY</div>
+    <div class="tag">AGENCE DE MARKETING DIGITAL</div>
 
-        <h1>We Build <span>Digital Success.</span></h1>
+    <h1>Nous construisons votre succès digital.</h1>
 
-        <p>
-            Nous aidons les marques à développer leur présence
-            en ligne grâce à la créativité, au contenu et aux
-            solutions digitales.
-        </p>
+    <p>
+        Nous aidons les marques, entrepreneurs et projets
+        à développer leur présence en ligne grâce à la
+        créativité, au contenu et aux solutions digitales.
+    </p>
 
-        <a href="#services" class="btn">
-            Découvrir nos services
-        </a>
-    </div>
-
-    <img src="mdigital%20project.png"
-         alt="Halima Digital - identité visuelle">
+    <a href="#services" class="btn">Découvrir nos services</a>
 </section>
 
-<!-- SERVICES -->
+<section id="services">
+    <h2 class="section-title">Nos services</h2>
 
-<section class="services" id="services">
-    <div class="section-title">
-        <h2>Nos services</h2>
-        <p>Des solutions créatives pour votre présence digitale.</p>
-    </div>
+    <p class="section-subtitle">
+        Des solutions créatives pour développer votre présence digitale.
+    </p>
 
-    <div class="cards">
+    <div class="services">
 
-        <div class="card">
-            <div class="symbol">📊</div>
+        <div class="service-card">
+            <div class="service-icon">📊</div>
             <h3>Stratégie digitale</h3>
-            <p>Des idées et stratégies pour développer votre marque.</p>
+            <p>
+                Des idées et des stratégies adaptées
+                pour développer votre marque.
+            </p>
         </div>
 
-        <div class="card">
-            <div class="symbol">🔎</div>
+        <div class="service-card">
+            <div class="service-icon">🔎</div>
             <h3>Référencement SEO</h3>
-            <p>Améliorer votre visibilité sur les moteurs de recherche.</p>
+            <p>
+                Améliorez votre visibilité sur les moteurs
+                de recherche et développez votre audience.
+            </p>
         </div>
 
-        <div class="card">
-            <div class="symbol">💻</div>
+        <div class="service-card">
+            <div class="service-icon">💻</div>
             <h3>Création web</h3>
-            <p>Des expériences web modernes et professionnelles.</p>
+            <p>
+                Des sites web modernes, élégants et
+                adaptés à votre activité.
+            </p>
         </div>
 
-        <div class="card">
-            <div class="symbol">📱</div>
-            <h3>Content creation</h3>
-            <p>Du contenu créatif pour valoriser votre identité.</p>
+        <div class="service-card">
+            <div class="service-icon">📱</div>
+            <h3>Création de contenu</h3>
+            <p>
+                Du contenu créatif pour valoriser
+                votre identité et votre communication.
+            </p>
         </div>
 
     </div>
 </section>
 
-<!-- A PROPOS -->
+<section class="about" id="apropos">
+    <div class="about-content">
 
-<section id="apropos">
-    <div class="about">
-        <div class="section-title">
-            <h2>About Halima Digital</h2>
-            <p>Creativity meets digital innovation.</p>
-        </div>
+        <h2 class="section-title">À propos de Halima Digital</h2>
+
+        <p class="section-subtitle">
+            La créativité au service de l'innovation digitale.
+        </p>
 
         <p>
-            Halima Digital est un projet créatif dédié au monde
-            du digital. Notre vision est d'aider les marques,
-            entrepreneurs et projets à construire une identité
-            forte et une présence en ligne professionnelle.
-            Nous croyons au pouvoir des idées, du contenu
-            et de l'innovation.
+            Halima Digital est un projet créatif dédié
+            à l'univers du digital et de la communication en ligne.
         </p>
+
+        <p>
+            Notre vision est d'accompagner les marques,
+            les entrepreneurs et les projets dans la
+            construction d'une identité forte et d'une
+            présence digitale professionnelle.
+        </p>
+
+        <p>
+            Nous croyons au pouvoir des idées, de la créativité,
+            du contenu et de l'innovation pour donner vie
+            aux projets.
+        </p>
+
     </div>
 </section>
 
-<!-- PORTFOLIO AVEC IMAGES -->
+<section id="portfolio">
+    <h2 class="section-title">Notre portfolio</h2>
 
-<section class="portfolio" id="portfolio">
+    <p class="section-subtitle">
+        Découvrez nos concepts créatifs et nos inspirations visuelles.
+    </p>
 
-    <div class="section-title">
-        <h2>Our Portfolio</h2>
-        <p>Discover our creative work and visual concepts.</p>
-    </div>
+    <div class="portfolio">
 
-    <div class="portfolio-grid">
-
-        <article class="portfolio-card">
-
-            <img class="portfolio-image"
-                 src="Halima%20Digital%20Agency%20Home.png"
-                 alt="Halima Digital Agency Home">
+        <div class="portfolio-card">
+            <img
+                class="portfolio-image"
+                src="Halima%20Digital%20Agency%20Home.png"
+                alt="Identité visuelle Halima Digital">
 
             <div class="portfolio-info">
-                <span class="project-type">BRAND IDENTITY</span>
+                <div class="portfolio-category">IDENTITÉ VISUELLE</div>
                 <h3>Bloom Studio</h3>
                 <p>
-                    A creative visual identity concept
-                    for a modern digital brand.
+                    Concept d'identité visuelle créative
+                    pour une marque digitale moderne.
                 </p>
             </div>
+        </div>
 
-        </article>
-
-        <article class="portfolio-card">
-
-            <img class="portfolio-image"
-                 src="Halima%20Digital%20Creative%20angency.png"
-                 alt="Halima Digital Creative Agency">
+        <div class="portfolio-card">
+            <img
+                class="portfolio-image"
+                src="Halima%20Digital%20Creative%20angency.png"
+                alt="Concept de création de contenu">
 
             <div class="portfolio-info">
-                <span class="project-type">SOCIAL MEDIA</span>
+                <div class="portfolio-category">RÉSEAUX SOCIAUX</div>
                 <h3>Pink Mood</h3>
                 <p>
-                    Creative visual content and social
-                    media design inspiration.
+                    Inspiration de contenu visuel et
+                    création graphique pour les réseaux sociaux.
                 </p>
             </div>
+        </div>
 
-        </article>
-
-        <article class="portfolio-card">
-
-            <img class="portfolio-image"
-                 src="mdigital%20project.png"
-                 alt="Halima Digital visual project">
+        <div class="portfolio-card">
+            <img
+                class="portfolio-image"
+                src="mdigital%20project.png"
+                alt="Projet visuel digital">
 
             <div class="portfolio-info">
-                <span class="project-type">WEB DESIGN</span>
+                <div class="portfolio-category">DESIGN DIGITAL</div>
                 <h3>Nova Digital</h3>
                 <p>
-                    A modern digital design concept
-                    with a clean and professional look.
+                    Concept de design digital moderne
+                    avec une présentation professionnelle.
                 </p>
             </div>
-
-        </article>
+        </div>
 
     </div>
 </section>
-
-<!-- CONTACT -->
 
 <section class="contact" id="contact">
 
-    <h2>Let's work together.</h2>
+    <h2 class="section-title">Entrons en contact</h2>
 
-    <p>
-        Vous avez un projet ou une question ?
-        Parlons-en !
+    <p class="section-subtitle">
+        Une idée, un projet ou une collaboration ?
+        Échangeons ensemble !
     </p>
 
-    <a class="btn" href="mailto:emilah720@gmail.com">
-        Contactez-nous
-    </a>
+    <div class="contact-list">
 
-    <div class="socials">
+        <div class="contact-item">
+            ✉️
+            <a href="mailto:emilah720@gmail.com">
+                emilah720@gmail.com
+            </a>
+        </div>
 
-        <a href="https://www.instagram.com/hali.madigital/"
-           target="_blank">Instagram</a>
+        <div class="contact-item">
+            📸 Instagram :
+            <a href="https://www.instagram.com/hali.madigital/"
+               target="_blank" rel="noopener noreferrer">
+                @hali.madigital
+            </a>
+        </div>
 
-        <a href="https://www.tiktok.com/@hlm_09"
-           target="_blank">TikTok</a>
+        <div class="contact-item">
+            🎵 TikTok :
+            <a href="https://www.tiktok.com/@hlm_09"
+               target="_blank" rel="noopener noreferrer">
+                @hlm_09
+            </a>
+        </div>
 
-        <a href="https://www.snapchat.com/add/lgm_girl01"
-           target="_blank">Snapchat</a>
+        <div class="contact-item">
+            👻 Snapchat :
+            <a href="https://www.snapchat.com/add/lgm_girl01"
+               target="_blank" rel="noopener noreferrer">
+                @lgm_girl01
+            </a>
+        </div>
 
     </div>
 
@@ -539,7 +515,9 @@ footer {
 </main>
 
 <footer>
-    © 2026 Halima Digital. All rights reserved.
+    © 2026 <span>Halima Digital</span> — Tous droits réservés.
+    <br>
+    Créativité • Innovation • Digital
 </footer>
 
 </body>
