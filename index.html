@@ -1,299 +1,421 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Halima Digital — Creative digital solutions, website design, branding and social media content.">
+<title>Halima Digital | Creative Digital Studio</title>
 
-<title>Halima Digital | Agence digitale créative</title>
-
-<meta name="description" content="Halima Digital accompagne les marques et entrepreneurs dans leur développement digital, leur identité visuelle et leur communication en ligne.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
+:root {
+  --navy: #101a35;
+  --pink: #e9a6c4;
+  --pink-dark: #ce78a1;
+  --light: #fff7fb;
+  --text: #596176;
+  --white: #ffffff;
 }
+
+* { margin:0; padding:0; box-sizing:border-box; scroll-behavior:smooth; }
 
 body {
-    font-family: Arial, sans-serif;
-    background: #f7f9fc;
-    color: #17243c;
-    line-height: 1.7;
+  font-family:'DM Sans',sans-serif;
+  color:var(--navy);
+  background:#fff;
+  line-height:1.7;
 }
+
+h1,h2,h3 { font-family:'Manrope',sans-serif; line-height:1.2; }
+a { text-decoration:none; color:inherit; }
+.container { width:min(1160px,90%); margin:auto; }
 
 header {
-    background: white;
-    padding: 20px 8%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 15px;
-    box-shadow: 0 3px 15px rgba(0,0,0,0.05);
-    position: sticky;
-    top: 0;
-    z-index: 100;
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(255,255,255,.94);
+  backdrop-filter:blur(15px);
+  border-bottom:1px solid #f2eaf0;
 }
 
-.logo {
-    font-size: 23px;
-    font-weight: bold;
-    color: #142b50;
-    letter-spacing: 1px;
+.nav {
+  min-height:82px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
 }
 
-.logo span {
-    color: #e58bb5;
+.logo { font-size:22px; font-weight:800; letter-spacing:-1px; }
+.logo span { color:var(--pink-dark); }
+
+.nav-links { display:flex; gap:30px; align-items:center; }
+.nav-links a { font-size:13px; font-weight:700; letter-spacing:1px; }
+.nav-links a:hover { color:var(--pink-dark); }
+
+.nav-button {
+  background:var(--navy);
+  color:white;
+  padding:12px 21px;
+  border-radius:30px;
 }
 
-nav {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-nav a {
-    text-decoration: none;
-    color: #17243c;
-    font-size: 13px;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-nav a:hover {
-    color: #e58bb5;
+.menu-btn {
+  display:none;
+  border:0;
+  background:none;
+  font-size:27px;
+  cursor:pointer;
 }
 
 .hero {
-    min-height: 520px;
-    padding: 100px 10%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background: linear-gradient(135deg, #102443, #244a79);
-    color: white;
+  background:linear-gradient(120deg,#fff8fb,#f5f5ff);
+  padding:115px 0 105px;
+  overflow:hidden;
 }
 
-.hero .tag {
-    color: #f1a9cd;
-    font-size: 13px;
-    letter-spacing: 3px;
-    margin-bottom: 18px;
+.hero-grid {
+  display:grid;
+  grid-template-columns:1.15fr .85fr;
+  gap:65px;
+  align-items:center;
+}
+
+.eyebrow {
+  color:var(--pink-dark);
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  margin-bottom:22px;
 }
 
 .hero h1 {
-    font-size: clamp(35px, 6vw, 58px);
-    margin-bottom: 20px;
+  font-size:clamp(42px,6vw,76px);
+  letter-spacing:-3px;
+  max-width:720px;
 }
+
+.hero h1 span { color:var(--pink-dark); }
 
 .hero p {
-    max-width: 650px;
-    color: #e2e9f3;
-    font-size: 17px;
-    margin-bottom: 30px;
+  color:var(--text);
+  max-width:550px;
+  margin:25px 0 32px;
+  font-size:17px;
 }
+
+.actions { display:flex; gap:14px; flex-wrap:wrap; }
 
 .btn {
-    display: inline-block;
-    padding: 13px 28px;
-    background: #e58bb5;
-    color: white;
-    text-decoration: none;
-    border-radius: 30px;
-    font-weight: bold;
-    transition: 0.3s;
+  display:inline-block;
+  padding:15px 25px;
+  border-radius:30px;
+  font-weight:700;
+  font-size:14px;
+  transition:.25s;
 }
 
-.btn:hover {
-    background: #d66c9d;
-    transform: translateY(-3px);
+.btn-primary { background:var(--navy); color:white; }
+.btn-primary:hover { background:var(--pink-dark); transform:translateY(-3px); }
+.btn-outline { border:1px solid #d9dce5; }
+.btn-outline:hover { border-color:var(--pink-dark); color:var(--pink-dark); }
+
+.hero-card {
+  background:white;
+  padding:17px;
+  border-radius:25px;
+  box-shadow:0 25px 70px #26314b18;
+  transform:rotate(2deg);
 }
 
-section {
-    padding: 80px 9%;
-    text-align: center;
+.hero-card img {
+  width:100%;
+  display:block;
+  border-radius:15px;
 }
 
-.section-title {
-    color: #142b50;
-    font-size: 32px;
-    margin-bottom: 12px;
+.hero-note {
+  padding:17px 8px 5px;
+  font-size:13px;
+  color:var(--text);
+  text-align:center;
 }
 
-.section-subtitle {
-    color: #718096;
-    margin-bottom: 45px;
+section { padding:100px 0; }
+
+.section-heading {
+  text-align:center;
+  max-width:680px;
+  margin:0 auto 55px;
 }
 
-.services {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 25px;
+.section-heading .eyebrow { margin-bottom:15px; }
+
+.section-heading h2 {
+  font-size:clamp(32px,4vw,47px);
+  letter-spacing:-1.5px;
+}
+
+.section-heading p {
+  color:var(--text);
+  margin-top:17px;
+}
+
+.services { background:#fff; }
+
+.service-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
 }
 
 .service-card {
-    background: white;
-    padding: 32px 22px;
-    border-radius: 16px;
-    box-shadow: 0 5px 25px rgba(20,43,80,0.06);
-    transition: 0.3s;
+  padding:32px;
+  border:1px solid #f0e9ef;
+  border-radius:20px;
+  transition:.3s;
 }
 
 .service-card:hover {
-    transform: translateY(-6px);
+  transform:translateY(-7px);
+  box-shadow:0 18px 45px #27324a12;
+  border-color:#e9bfd1;
 }
 
 .service-icon {
-    font-size: 35px;
-    margin-bottom: 15px;
+  width:53px;
+  height:53px;
+  display:grid;
+  place-items:center;
+  background:#fff0f6;
+  border-radius:16px;
+  font-size:24px;
+  margin-bottom:24px;
 }
 
-.service-card h3 {
-    color: #142b50;
-    margin-bottom: 10px;
+.service-card h3 { font-size:19px; margin-bottom:12px; }
+.service-card p { color:var(--text); font-size:14px; }
+
+.about { background:var(--light); }
+
+.about-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:75px;
+  align-items:center;
 }
 
-.about {
-    background: white;
+.about-panel {
+  min-height:390px;
+  background:linear-gradient(145deg,#172342,#394668);
+  border-radius:25px;
+  padding:45px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  color:white;
 }
 
-.about-content {
-    max-width: 800px;
-    margin: auto;
+.about-panel .big {
+  font-size:65px;
+  color:#f0b8d0;
+  font-family:'Manrope',sans-serif;
+  font-weight:800;
 }
 
-.about-content p {
-    color: #596579;
-    margin-top: 15px;
+.about-panel p { color:#e0e5f0; }
+
+.about-copy h2 {
+  font-size:42px;
+  letter-spacing:-1.5px;
+  margin-bottom:22px;
 }
 
-.portfolio {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 25px;
+.about-copy p { color:var(--text); margin-bottom:17px; }
+
+.values {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:17px;
+  margin-top:28px;
 }
 
-.portfolio-card {
-    background: white;
-    border-radius: 16px;
-    overflow: hidden;
-    text-align: left;
-    box-shadow: 0 5px 25px rgba(20,43,80,0.07);
-    transition: 0.3s;
+.value {
+  padding:17px;
+  background:white;
+  border-radius:13px;
+  font-size:13px;
+  font-weight:700;
 }
 
-.portfolio-card:hover {
-    transform: translateY(-6px);
+.value span { color:var(--pink-dark); margin-right:7px; }
+
+.process-grid {
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:22px;
 }
 
-.portfolio-image {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    display: block;
+.process-item { border-top:2px solid #e8b4cb; padding-top:20px; }
+.process-number { color:var(--pink-dark); font-weight:800; font-size:13px; }
+.process-item h3 { margin:13px 0; font-size:19px; }
+.process-item p { color:var(--text); font-size:14px; }
+
+.portfolio { background:#fbfaff; }
+
+.portfolio-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px;
 }
 
-.portfolio-info {
-    padding: 22px;
+.project {
+  background:white;
+  border-radius:19px;
+  overflow:hidden;
+  border:1px solid #eeeaf2;
+  transition:.3s;
 }
 
-.portfolio-category {
-    color: #d66c9d;
-    font-size: 11px;
-    font-weight: bold;
-    letter-spacing: 2px;
+.project:hover { transform:translateY(-6px); }
+
+.project img {
+  width:100%;
+  height:230px;
+  object-fit:cover;
+  display:block;
+  background:#f7eaf1;
 }
 
-.portfolio-info h3 {
-    color: #142b50;
-    margin: 8px 0;
+.project-placeholder {
+  height:230px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:25px;
+  background:linear-gradient(135deg,#fbe7f0,#e8eafa);
+  color:#293552;
+  font-family:'Manrope',sans-serif;
+  font-size:24px;
+  font-weight:800;
 }
 
-.portfolio-info p {
-    color: #718096;
-    font-size: 14px;
+.project-info { padding:23px; }
+.project-info small { color:var(--pink-dark); font-weight:800; letter-spacing:1px; }
+.project-info h3 { margin:8px 0; font-size:19px; }
+.project-info p { color:var(--text); font-size:13px; }
+
+.cta {
+  background:var(--navy);
+  color:white;
+  text-align:center;
+  padding:85px 20px;
 }
 
-.contact {
-    background: #142b50;
-    color: white;
+.cta h2 { font-size:clamp(32px,5vw,50px); max-width:750px; margin:0 auto 20px; }
+.cta p { color:#cbd1df; margin-bottom:30px; }
+.cta .btn { background:var(--pink); color:var(--navy); }
+
+.contact-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:65px;
 }
 
-.contact .section-title {
-    color: white;
+.contact-copy h2 { font-size:42px; margin-bottom:18px; }
+.contact-copy p { color:var(--text); margin-bottom:25px; }
+
+.contact-detail {
+  padding:15px 0;
+  border-bottom:1px solid #eee;
+  font-size:14px;
 }
 
-.contact .section-subtitle {
-    color: #d5deeb;
+.contact-detail strong { display:block; margin-bottom:4px; }
+.contact-detail a { color:var(--pink-dark); }
+
+.socials {
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:25px;
 }
 
-.contact-list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 18px;
-    margin-top: 30px;
+.socials a {
+  padding:11px 17px;
+  border:1px solid #eadde5;
+  border-radius:30px;
+  font-size:13px;
+  font-weight:700;
+  transition:.2s;
 }
 
-.contact-item {
-    background: rgba(255,255,255,0.08);
-    padding: 15px 25px;
-    border-radius: 12px;
-    width: min(100%, 430px);
-    transition: 0.3s;
+.socials a:hover {
+  background:var(--navy);
+  color:white;
+  border-color:var(--navy);
 }
 
-.contact-item:hover {
-    background: rgba(255,255,255,0.15);
+.contact-panel {
+  background:#fff7fb;
+  border-radius:22px;
+  padding:35px;
 }
 
-.contact-item a {
-    color: white;
-    text-decoration: none;
-    overflow-wrap: anywhere;
-}
-
-.contact-item a:hover {
-    color: #f1a9cd;
-}
+.contact-panel h3 { font-size:24px; margin-bottom:15px; }
+.contact-panel p { color:var(--text); font-size:14px; margin-bottom:23px; }
 
 footer {
-    background: #0b1b32;
-    color: #cbd5e1;
-    padding: 25px 10%;
-    text-align: center;
-    font-size: 13px;
+  background:#0c142b;
+  color:white;
+  padding:35px 0;
 }
 
-footer span {
-    color: #e58bb5;
+.footer-content {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+  flex-wrap:wrap;
 }
 
-@media (max-width: 600px) {
-    header {
-        justify-content: center;
-    }
+footer p { color:#aeb6c9; font-size:12px; }
+footer a { color:#f0b8d0; }
 
-    nav {
-        justify-content: center;
-        gap: 12px;
-    }
+@media(max-width:850px) {
+  .hero-grid,.about-grid,.contact-grid { grid-template-columns:1fr; }
+  .hero-card { max-width:540px; margin:auto; }
+  .service-grid,.portfolio-grid { grid-template-columns:repeat(2,1fr); }
+  .process-grid { grid-template-columns:repeat(2,1fr); }
+}
 
-    nav a {
-        font-size: 11px;
-    }
-
-    .hero {
-        padding: 80px 7%;
-    }
-
-    section {
-        padding: 65px 7%;
-    }
+@media(max-width:650px) {
+  .menu-btn { display:block; }
+  .nav-links {
+    display:none;
+    position:absolute;
+    top:82px;
+    left:0;
+    width:100%;
+    background:white;
+    padding:25px 5%;
+    flex-direction:column;
+    align-items:flex-start;
+    border-bottom:1px solid #eee;
+  }
+  .nav-links.open { display:flex; }
+  .hero { padding:75px 0; }
+  .hero h1 { letter-spacing:-2px; }
+  section { padding:75px 0; }
+  .service-grid,.portfolio-grid,.process-grid { grid-template-columns:1fr; }
+  .about-panel { min-height:300px; padding:30px; }
+  .about-copy h2,.contact-copy h2 { font-size:34px; }
+  .values { grid-template-columns:1fr 1fr; }
+  .footer-content { flex-direction:column; align-items:flex-start; }
 }
 </style>
 </head>
@@ -301,224 +423,295 @@ footer span {
 <body>
 
 <header>
-    <div class="logo">HALIMA <span>DIGITAL</span></div>
+  <div class="container nav">
+    <a href="#home" class="logo">HALIMA<span>.</span>DIGITAL</a>
 
-    <nav>
-        <a href="#accueil">ACCUEIL</a>
-        <a href="#apropos">À PROPOS</a>
-        <a href="#services">SERVICES</a>
-        <a href="#portfolio">PORTFOLIO</a>
-        <a href="#contact">CONTACT</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open navigation menu">☰</button>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#home">HOME</a>
+      <a href="#about">ABOUT</a>
+      <a href="#services">SERVICES</a>
+      <a href="#portfolio">PORTFOLIO</a>
+      <a href="#contact" class="nav-button">LET'S TALK</a>
     </nav>
+  </div>
 </header>
 
 <main>
 
-<section class="hero" id="accueil">
-    <div class="tag">AGENCE DE MARKETING DIGITAL</div>
-
-    <h1>Nous construisons votre succès digital.</h1>
-
-    <p>
-        Nous aidons les marques, entrepreneurs et projets
-        à développer leur présence en ligne grâce à la
-        créativité, au contenu et aux solutions digitales.
-    </p>
-
-    <a href="#services" class="btn">Découvrir nos services</a>
-</section>
-
-<section id="services">
-    <h2 class="section-title">Nos services</h2>
-
-    <p class="section-subtitle">
-        Des solutions créatives pour développer votre présence digitale.
-    </p>
-
-    <div class="services">
-
-        <div class="service-card">
-            <div class="service-icon">📊</div>
-            <h3>Stratégie digitale</h3>
-            <p>
-                Des idées et des stratégies adaptées
-                pour développer votre marque.
-            </p>
-        </div>
-
-        <div class="service-card">
-            <div class="service-icon">🔎</div>
-            <h3>Référencement SEO</h3>
-            <p>
-                Améliorez votre visibilité sur les moteurs
-                de recherche et développez votre audience.
-            </p>
-        </div>
-
-        <div class="service-card">
-            <div class="service-icon">💻</div>
-            <h3>Création web</h3>
-            <p>
-                Des sites web modernes, élégants et
-                adaptés à votre activité.
-            </p>
-        </div>
-
-        <div class="service-card">
-            <div class="service-icon">📱</div>
-            <h3>Création de contenu</h3>
-            <p>
-                Du contenu créatif pour valoriser
-                votre identité et votre communication.
-            </p>
-        </div>
-
-    </div>
-</section>
-
-<section class="about" id="apropos">
-    <div class="about-content">
-
-        <h2 class="section-title">À propos de Halima Digital</h2>
-
-        <p class="section-subtitle">
-            La créativité au service de l'innovation digitale.
-        </p>
-
-        <p>
-            Halima Digital est un projet créatif dédié
-            à l'univers du digital et de la communication en ligne.
-        </p>
-
-        <p>
-            Notre vision est d'accompagner les marques,
-            les entrepreneurs et les projets dans la
-            construction d'une identité forte et d'une
-            présence digitale professionnelle.
-        </p>
-
-        <p>
-            Nous croyons au pouvoir des idées, de la créativité,
-            du contenu et de l'innovation pour donner vie
-            aux projets.
-        </p>
-
-    </div>
-</section>
-
-<section id="portfolio">
-    <h2 class="section-title">Notre portfolio</h2>
-
-    <p class="section-subtitle">
-        Découvrez nos concepts créatifs et nos inspirations visuelles.
-    </p>
-
-    <div class="portfolio">
-
-        <div class="portfolio-card">
-            <img
-                class="portfolio-image"
-                src="Halima%20Digital%20Agency%20Home.png"
-                alt="Identité visuelle Halima Digital">
-
-            <div class="portfolio-info">
-                <div class="portfolio-category">IDENTITÉ VISUELLE</div>
-                <h3>Bloom Studio</h3>
-                <p>
-                    Concept d'identité visuelle créative
-                    pour une marque digitale moderne.
-                </p>
-            </div>
-        </div>
-
-        <div class="portfolio-card">
-            <img
-                class="portfolio-image"
-                src="Halima%20Digital%20Creative%20angency.png"
-                alt="Concept de création de contenu">
-
-            <div class="portfolio-info">
-                <div class="portfolio-category">RÉSEAUX SOCIAUX</div>
-                <h3>Pink Mood</h3>
-                <p>
-                    Inspiration de contenu visuel et
-                    création graphique pour les réseaux sociaux.
-                </p>
-            </div>
-        </div>
-
-        <div class="portfolio-card">
-            <img
-                class="portfolio-image"
-                src="mdigital%20project.png"
-                alt="Projet visuel digital">
-
-            <div class="portfolio-info">
-                <div class="portfolio-category">DESIGN DIGITAL</div>
-                <h3>Nova Digital</h3>
-                <p>
-                    Concept de design digital moderne
-                    avec une présentation professionnelle.
-                </p>
-            </div>
-        </div>
-
-    </div>
-</section>
-
-<section class="contact" id="contact">
-
-    <h2 class="section-title">Entrons en contact</h2>
-
-    <p class="section-subtitle">
-        Une idée, un projet ou une collaboration ?
-        Échangeons ensemble !
-    </p>
-
-    <div class="contact-list">
-
-        <div class="contact-item">
-            ✉️
-            <a href="mailto:emilah720@gmail.com">
-                emilah720@gmail.com
-            </a>
-        </div>
-
-        <div class="contact-item">
-            📸 Instagram :
-            <a href="https://www.instagram.com/hali.madigital/"
-               target="_blank" rel="noopener noreferrer">
-                @hali.madigital
-            </a>
-        </div>
-
-        <div class="contact-item">
-            🎵 TikTok :
-            <a href="https://www.tiktok.com/@hlm_09"
-               target="_blank" rel="noopener noreferrer">
-                @hlm_09
-            </a>
-        </div>
-
-        <div class="contact-item">
-            👻 Snapchat :
-            <a href="https://www.snapchat.com/add/lgm_girl01"
-               target="_blank" rel="noopener noreferrer">
-                @lgm_girl01
-            </a>
-        </div>
-
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div>
+      <div class="eyebrow">Independent Creative Digital Studio</div>
+      <h1>Ideas into <span>digital experiences.</span></h1>
+      <p>
+        We help ideas grow through thoughtful website design,
+        creative visuals and digital content. Discover a more
+        intentional way to present your brand online.
+      </p>
+      <div class="actions">
+        <a href="#portfolio" class="btn btn-primary">Explore our work ↗</a>
+        <a href="#contact" class="btn btn-outline">Start a project</a>
+      </div>
     </div>
 
+    <div class="hero-card">
+      <img src="Halima%20Digital%20Agency%20Home.png" alt="Halima Digital creative presentation">
+      <div class="hero-note">Creative thinking. Meaningful digital presence.</div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-heading">
+      <div class="eyebrow">What we do</div>
+      <h2>Creative solutions for ambitious ideas.</h2>
+      <p>From the first concept to the final presentation, we bring creativity and clarity to every digital project.</p>
+    </div>
+
+    <div class="service-grid">
+      <article class="service-card">
+        <div class="service-icon">✦</div>
+        <h3>Website Design</h3>
+        <p>Modern, responsive and visually engaging websites designed to introduce your work and connect with your audience.</p>
+      </article>
+
+      <article class="service-card">
+        <div class="service-icon">◈</div>
+        <h3>Visual Identity</h3>
+        <p>Creative visual direction, colour palettes and design elements that help your brand build a recognizable presence.</p>
+      </article>
+
+      <article class="service-card">
+        <div class="service-icon">♡</div>
+        <h3>Social Media Content</h3>
+        <p>Thoughtful digital content and social media visuals that communicate your message with consistency and style.</p>
+      </article>
+
+      <article class="service-card">
+        <div class="service-icon">✧</div>
+        <h3>Graphic Design</h3>
+        <p>Digital graphics, promotional materials and creative layouts for personal projects and growing businesses.</p>
+      </article>
+
+      <article class="service-card">
+        <div class="service-icon">⌘</div>
+        <h3>Digital Presentation</h3>
+        <p>Professional presentations and online materials that make your ideas easier to understand and remember.</p>
+      </article>
+
+      <article class="service-card">
+        <div class="service-icon">↗</div>
+        <h3>Creative Support</h3>
+        <p>Organized creative assistance to develop concepts, refine digital projects and bring ideas closer to reality.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="container about-grid">
+    <div class="about-panel">
+      <div class="eyebrow">Our perspective</div>
+      <div class="big">Think.<br>Create.<br>Connect.</div>
+      <p>Good digital experiences begin with ideas that matter.</p>
+    </div>
+
+    <div class="about-copy">
+      <div class="eyebrow">About Halima Digital</div>
+      <h2>A creative space where ideas take shape.</h2>
+      <p>
+        Halima Digital is an independent creative digital project
+        focused on helping individuals, entrepreneurs and small
+        businesses express their ideas online.
+      </p>
+      <p>
+        We believe that every project deserves attention, thoughtful
+        design and a clear message. Our approach combines creativity,
+        simplicity and a passion for digital communication.
+      </p>
+
+      <div class="values">
+        <div class="value"><span>✦</span> Creative thinking</div>
+        <div class="value"><span>✦</span> Clear communication</div>
+        <div class="value"><span>✦</span> Thoughtful design</div>
+        <div class="value"><span>✦</span> Continuous learning</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="process">
+  <div class="container">
+    <div class="section-heading">
+      <div class="eyebrow">How we work</div>
+      <h2>From your idea to its digital expression.</h2>
+      <p>A simple and collaborative process helps every project move forward with purpose.</p>
+    </div>
+
+    <div class="process-grid">
+      <div class="process-item">
+        <div class="process-number">01 / DISCOVER</div>
+        <h3>Understanding</h3>
+        <p>We learn about your idea, your goals and the people you want to reach.</p>
+      </div>
+
+      <div class="process-item">
+        <div class="process-number">02 / PLAN</div>
+        <h3>Planning</h3>
+        <p>We organize the main direction, content and creative requirements.</p>
+      </div>
+
+      <div class="process-item">
+        <div class="process-number">03 / CREATE</div>
+        <h3>Designing</h3>
+        <p>We develop the visual experience and bring the concept to life.</p>
+      </div>
+
+      <div class="process-item">
+        <div class="process-number">04 / DELIVER</div>
+        <h3>Final review</h3>
+        <p>We review the result and prepare the project for its next step.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="portfolio" id="portfolio">
+  <div class="container">
+    <div class="section-heading">
+      <div class="eyebrow">Selected creative work</div>
+      <h2>Ideas, concepts and digital projects.</h2>
+      <p>A selection of visual explorations and project concepts from Halima Digital.</p>
+    </div>
+
+    <div class="portfolio-grid">
+      <article class="project">
+        <img src="Halima%20Digital%20Creative%20angency.png" alt="Halima Digital creative agency concept">
+        <div class="project-info">
+          <small>BRAND PRESENTATION</small>
+          <h3>Creative Studio Identity</h3>
+          <p>A visual direction for a modern creative digital studio.</p>
+        </div>
+      </article>
+
+      <article class="project">
+        <img src="mdigital%20project.png" alt="Digital project presentation">
+        <div class="project-info">
+          <small>DIGITAL DESIGN</small>
+          <h3>Digital Project Concept</h3>
+          <p>A creative exploration of digital presentation and layout.</p>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project-placeholder">01<br>Modern Web</div>
+        <div class="project-info">
+          <small>WEBSITE CONCEPT</small>
+          <h3>Modern Web Experience</h3>
+          <p>A conceptual direction for a clean and responsive website.</p>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project-placeholder">02<br>Social Stories</div>
+        <div class="project-info">
+          <small>SOCIAL MEDIA CONCEPT</small>
+          <h3>Social Content Series</h3>
+          <p>A concept for consistent and engaging social media visuals.</p>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project-placeholder">03<br>Pink Identity</div>
+        <div class="project-info">
+          <small>VISUAL IDENTITY CONCEPT</small>
+          <h3>Pink Identity Direction</h3>
+          <p>A playful visual concept built around a soft colour palette.</p>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project-placeholder">04<br>Brand Story</div>
+        <div class="project-info">
+          <small>CREATIVE DIRECTION</small>
+          <h3>Brand Story Concept</h3>
+          <p>A conceptual presentation exploring brand personality and communication.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="container">
+    <div class="eyebrow">Have an idea in mind?</div>
+    <h2>Let's create something meaningful together.</h2>
+    <p>Your next digital project can start with one conversation.</p>
+    <a href="#contact" class="btn">Start a conversation ↗</a>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container contact-grid">
+    <div class="contact-copy">
+      <div class="eyebrow">Get in touch</div>
+      <h2>Let's talk about your next idea.</h2>
+      <p>Have a project, a collaboration idea or a question? Get in touch. We'd love to hear from you.</p>
+
+      <div class="contact-detail">
+        <strong>Email</strong>
+        <a href="mailto:emilah720@gmail.com">emilah720@gmail.com</a>
+      </div>
+
+      <div class="contact-detail">
+        <strong>Location</strong>
+        N'Djamena, Chad
+      </div>
+
+      <div class="socials">
+        <a href="https://www.instagram.com/hali.madigital/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+        <a href="https://www.tiktok.com/@hlm_09" target="_blank" rel="noopener noreferrer">TikTok ↗</a>
+        <a href="https://www.snapchat.com/add/lgm_girl01" target="_blank" rel="noopener noreferrer">Snapchat ↗</a>
+      </div>
+    </div>
+
+    <div class="contact-panel">
+      <h3>Start a project</h3>
+      <p>Tell us a little about what you have in mind. Send an email and let's discuss your idea.</p>
+      <a class="btn btn-primary" href="mailto:emilah720@gmail.com?subject=Project%20Inquiry%20-%20Halima%20Digital">Send an inquiry ↗</a>
+    </div>
+  </div>
 </section>
 
 </main>
 
 <footer>
-    © 2026 <span>Halima Digital</span> — Tous droits réservés.
-    <br>
-    Créativité • Innovation • Digital
+  <div class="container footer-content">
+    <a href="#home" class="logo">HALIMA<span>.</span>DIGITAL</a>
+    <p>Independent creative digital studio · N'Djamena, Chad</p>
+    <p>© <span id="year"></span> Halima Digital. All rights reserved.</p>
+  </div>
 </footer>
+
+<script>
+const menuBtn = document.getElementById('menuBtn');
+const navLinks = document.getElementById('navLinks');
+
+menuBtn.addEventListener('click', () => {
+  navLinks.classList.toggle('open');
+});
+
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+  });
+});
+
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>
